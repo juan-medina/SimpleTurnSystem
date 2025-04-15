@@ -1,0 +1,68 @@
+﻿# Ignore build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.pdb
+*.cache
+*.log
+*.csproj.user
+
+# Visual Studio specific files
+.vscode/
+.vs/
+.env/
+
+# NuGet packages
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Generated files
+*.dll
+*.exe
+*.app
+*.ipa
+*.iobj
+*.ipdb
+*.o
+*.a
+*.lib
+
+# Debug and Release folders
+Debug/
+Release/
+
+# Test results
+TestResults/
+.trx
+*.coverage
+*.codecoverage
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.csv
+
+# JetBrains Rider specific files
+.idea/
+*.iml
+
+# Configuration files that should not be shared
+*.config
+appsettings.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Generated from dotnet CLI tools
+*.dotnet/tools/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
