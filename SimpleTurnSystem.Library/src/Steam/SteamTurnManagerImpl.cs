@@ -18,15 +18,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using SimpleTurnSystem.Steam;
+namespace SimpleTurnSystem.Steam;
 
-namespace SimpleTurnSystem
+internal class SteamTurnManagerImpl : ITurnManager
 {
-	public abstract class TurnManager
+	public SteamTurnManagerImpl()
 	{
-		public static ITurnManager Create()
-		{
-			return new SteamTurnManagerImpl();
-		}
+		Console.WriteLine("TurnManager created.");
+	}
+
+	~SteamTurnManagerImpl()
+	{
+		ReleaseUnmanagedResources();
+	}
+
+	public void Hello()
+	{
+		Console.WriteLine("Hello World!");
+	}
+
+	private void ReleaseUnmanagedResources()
+	{
+		// TODO release unmanaged resources here
+	}
+
+	public void Dispose()
+	{
+		ReleaseUnmanagedResources();
+		GC.SuppressFinalize(this);
 	}
 }

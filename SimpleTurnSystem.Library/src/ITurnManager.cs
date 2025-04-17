@@ -18,15 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using SimpleTurnSystem.Steam;
+namespace SimpleTurnSystem;
 
-namespace SimpleTurnSystem
+public interface ITurnManager : IDisposable
 {
-	public abstract class TurnManager
-	{
-		public static ITurnManager Create()
-		{
-			return new SteamTurnManagerImpl();
-		}
-	}
+	public void Hello();
 }

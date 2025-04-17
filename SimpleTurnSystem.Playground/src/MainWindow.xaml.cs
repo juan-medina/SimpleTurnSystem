@@ -7,10 +7,18 @@ namespace TurnPlayground;
 /// </summary>
 public partial class MainWindow
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-        var turnManager = new TurnManager();
-        turnManager.Hello();
-    }
+	private readonly ITurnManager _turnManager;
+
+	public MainWindow()
+	{
+		InitializeComponent();
+		_turnManager = TurnManager.Create();
+		_turnManager.Hello();
+	}
+
+	protected override void OnClosed(EventArgs e)
+	{
+		base.OnClosed(e);
+		_turnManager.Dispose();
+	}
 }
